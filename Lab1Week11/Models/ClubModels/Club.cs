@@ -16,8 +16,9 @@ namespace Lab1Week11.Models.ClubModel
         public int ClubId { get; set; }
         public string ClubName { get; set; }
 
+        [DisplayFormat(DataFormatString = "{0:yyyy/MM/dd HH:mm:ss}")]
         [Column(TypeName = "date")]
-        public DateTime CreationDate { get; set; }
+        public DateTime? CreationDate { get; set; }
 
         public int adminID { get; set; }
         public virtual ICollection<Member> clubMembers { get; set; }
